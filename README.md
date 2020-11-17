@@ -9,7 +9,10 @@ https://drive.google.com/file/d/1SmpoGfhIQ2ADszpHC9JXlXTDJvU4vOMO/view?usp=shari
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YML Playbook and config_ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - https://github.com/snunez90/azure-project/tree/main/Playbooks
+  - https://github.com/snunez90/azure-project/blob/main/Playbooks/ELK_playbook.yml
+    https://github.com/snunez90/azure-project/blob/main/Playbooks/filebeat-playbook.yml
+    https://github.com/snunez90/azure-project/blob/main/Playbooks/metricbeat-playbook.yml
+    https://github.com/snunez90/azure-project/blob/main/Playbooks/myfirstplaybook.yml
 
 This document contains the following details:
 - Description of the Topology
@@ -92,8 +95,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 **Note**: The following image link needs to be updated. Replace `docker_ps_output.png` with the name of your screenshot image file.  
 
-
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+https://github.com/snunez90/azure-project/blob/main/Playbooks/sudo%20docker%20ps.png
 
 ### Target Machines & Beats
 
@@ -116,6 +118,7 @@ SSH into the control node and follow the steps below:
 - Copy the filebeat cfg file to -/etc/ansible/files.
 - Update the -filebeat- file to include... the Ip address of the machines you want to install the filebeat.yml
 - Run the playbook, and navigate to Kibana Website>add log data>>system logs to check that the installation worked as expected.
+  https://github.com/snunez90/azure-project/blob/main/Playbooks/filebeats_modulestatus.png
 
 Answer the following questions to fill in the blanks:
 Which file is the playbook? Where do you copy it? 
@@ -123,8 +126,11 @@ Which file is the playbook? Where do you copy it?
 
 Which file do you update to make Ansible run the playbook on a specific machine? 
 - Host file
+https://github.com/snunez90/azure-project/blob/main/Playbooks/Host%20file.png
+
 How do I specify which machine to install the ELK server on versus which to install Filebeat on? 
 - IP of the machines you want to install have to be added to either filebeat-config.yml or metricbeat-config.yml 
+
 Which URL do you navigate to in order to check that the ELK server is running?
 -  http://52.151.4.184:5601/app/kibana
 
@@ -135,7 +141,8 @@ Download Filebeat config file and copy to filebeat-config.yml
 Update filebeat congif.yml file
 -Nano filebeat-config.yml
 -Ctrl w to specify line 
-
+https://github.com/snunez90/azure-project/blob/main/Playbooks/filebeat-cfg.yml.png
+https://github.com/snunez90/azure-project/blob/main/Playbooks/filebeat-cfg2.yml.png
 Once playbook completed run playbook:
 -Ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
 If no errors, verify installation worked on Kibana website:
