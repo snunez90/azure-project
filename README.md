@@ -143,15 +143,21 @@ Download Filebeat config file and copy to filebeat-config.yml
 -curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb > /etc/ansible/roles/filebeat-config.yml
 
 Update filebeat congif.yml file
+
 -Nano filebeat-config.yml
+
 -Ctrl w to specify line 
+
 https://github.com/snunez90/azure-project/blob/main/Playbooks/filebeat-cfg.yml.png
+
 https://github.com/snunez90/azure-project/blob/main/Playbooks/filebeat-cfg2.yml.png
 
 Once playbook completed run playbook:
+
 -Ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
 
 If no errors, verify installation worked on Kibana website:
+
 -kibana>add log data>system logs>check data
 
 
