@@ -10,8 +10,11 @@ https://drive.google.com/file/d/1SmpoGfhIQ2ADszpHC9JXlXTDJvU4vOMO/view?usp=shari
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YML Playbook and config_ file may be used to install only certain pieces of it, such as Filebeat.
 
   - https://github.com/snunez90/azure-project/blob/main/Playbooks/ELK_playbook.yml
+  
     https://github.com/snunez90/azure-project/blob/main/Playbooks/filebeat-playbook.yml
+    
     https://github.com/snunez90/azure-project/blob/main/Playbooks/metricbeat-playbook.yml
+    
     https://github.com/snunez90/azure-project/blob/main/Playbooks/myfirstplaybook.yml
 
 This document contains the following details:
